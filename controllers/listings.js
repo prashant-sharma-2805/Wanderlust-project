@@ -105,7 +105,7 @@ module.exports.updateListing = async(req, res)=>{
     //changing map position according to location
 
     let place = listing.location;
-    let result = await axios.get(`https://nominatim.openstreetmap.org/search?q=${place}&format=json`,
+    let result = await axios.get(`https://nominatim.openstreetmap.org/search?q=${encodeURIComponent(place)}&format=json`,
         {
             headers : {
                 "User-Agent" : "wanderlust/1.0",
