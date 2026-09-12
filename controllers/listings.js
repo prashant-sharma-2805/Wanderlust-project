@@ -115,7 +115,9 @@ module.exports.updateListing = async(req, res)=>{
     //changing map position according to location
 
     let place = listing.location;
-    let result = await axios.get(`https://nominatim.openstreetmap.org/search?q=${encodeURIComponent(place)}&format=json`,
+
+    try{
+            let result = await axios.get(`https://nominatim.openstreetmap.org/search?q=${encodeURIComponent(place)}&format=json`,
         {
             headers : {
                 "User-Agent" : "wanderlust/1.0",
@@ -142,6 +144,14 @@ module.exports.updateListing = async(req, res)=>{
 
     req.flash("success", "Listing Updated");
     res.redirect(`/listings/${id}`);
+    }catch(err){
+        if(err.response && err.response.status === 429){
+                req.flash("error", "Location service is temporarily unavailable. Please try again!");
+                return res.redirect(`/listings/${id}/edit`);
+        }
+        next(err);
+    }
+
 };
 
 
