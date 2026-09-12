@@ -21,7 +21,8 @@ module.exports.createListing = async(req, res, next)=>{
 
         let place = newListing.location;
 
-        let result = await axios.get(`https://nominatim.openstreetmap.org/search?q=${place}&format=json`,
+        try{
+            let result = await axios.get(`https://nominatim.openstreetmap.org/search?q=${place}&format=json`,
         {
             headers : {
                 "User-agent" : "wanderlust/1.0",
@@ -53,6 +54,15 @@ module.exports.createListing = async(req, res, next)=>{
         req.flash("success", "New Listing Created !");
         res.redirect("/listings");
 
+        }catch(err){
+         if(err.response && err.response.status === 429){
+            req.flash("error", "Location service is temporarily unavailable. Please try again !");
+            return res.redirect("/listings/new");
+         }
+         next(err);   
+        }
+
+        
 };
         
 
