@@ -1,4 +1,108 @@
-@media(max-width : 400px){
+@media (max-width : 340px){
+    #filters{
+        display: none !important;
+    }
+    .fa-compass{
+        display: none;
+    }
+
+    .navbar-collapse{
+        background-color: white;
+        text-align: center;
+    }
+
+       .search-btn{
+        width: 20%;
+        height: 65%;
+        font-size: 0.60rem;
+        
+    }
+
+    .search-inp{
+        width: 55%;
+        padding: 0 0.5rem 0 0.5rem!important;
+        text-align: center;
+        border: 1px solid black;
+    }
+
+    .search-inp::placeholder{
+        font-size: 0.75rem;
+        text-align: center;
+        font-weight: bold;
+        position: relative;
+        left: 5px;
+        bottom: 2px;
+        padding: 0 !important;
+    }
+
+    .search-box{
+        position: relative;
+        top: 9px;
+    }
+
+    .hamburger{
+        background-color: white;
+        font-size: 0.65rem;
+        margin-left: 16.5rem;
+        bottom: 17px !important;
+        border: 1px solid black;
+        position: relative;
+        
+    }
+    
+
+    
+}
+
+
+@media (min-width : 340px) and (max-width : 349px){
+    .filter p{
+        font-size: 0.4rem !important;
+    }
+
+    #filters{
+        display: none !important;
+    }
+    .navbar-collapse{
+        background-color: white;
+        text-align: center;
+    }
+
+        .search-btn{
+        width: 20%;
+        height: 60%;
+        font-size: 0.60rem;
+        
+    }
+
+    .search-inp{
+        width: 55%;
+        padding: 0!important;
+        text-align: center;
+        border: 1px solid black;
+    }
+
+    .search-inp::placeholder{
+        font-size: 0.75rem;
+        text-align: center;
+        font-weight: bold;
+        position: relative;
+        padding: 0 !important;
+    }
+
+    .hamburger{
+        background-color: white;
+        font-size: 0.65rem;
+        position: relative;
+        top: -35px;
+        left: 76vw;
+        border: 1px solid black;
+        margin-left: 1rem;
+    }
+}
+
+
+@media (min-width : 349px) and (max-width : 406px){
     .filter p{
         font-size: 0.4rem;
     }
@@ -16,7 +120,7 @@
     
         position: relative;
         top: 10px;
-        right: 8vw;
+        right: 4vw;
     }
 
     .search-btn{
@@ -56,4 +160,76 @@
     }
 
  
+}
+
+@media (min-width : 407px) and (max-width : 575px){
+    .filter p{
+        font-size: 0.4rem !important;
+    }
+    #filters{
+        display: none !important;
+    }
+
+
+
+    .search-inp{
+        width: 55%;
+        padding: 0 !important;
+        text-align: center;
+        border: 1px solid black;
+    }
+
+    .search-btn{
+        width: 25%;
+        height: 60%;
+        font-size: 0.65rem;
+    }
+
+    .search-inp::placeholder{
+        font-size: 0.80rem;
+        text-align: center;
+    }
+
+    .navbar-collapse{
+        background-color: white;
+        text-align: center;
+    }
+
+    .hamburger{
+        border: 1px solid black;
+    }
+}
+
+
+@media (min-width : 575px) and (max-width : 767px){
+    #filters{
+        display: none !important;
+    }   
+
+    .search-inp{
+        width: 60%;
+        padding: 0 !important;
+        text-align: center;
+        border: 1px solid black;
+    }
+    .search-btn{
+        width: 30%;
+        font-size: 0.75rem;
+    }
+
+    .search-inp::placeholder{
+        font-size: 0.75rem;
+        text-align: center;
+        font-weight: bold;
+        position: relative;
+        right: -5px;
+    }
+
+    .uploadListing{
+        font-size: 0.7rem;
+    }
+
+    .plus-icon{
+        margin-right: 8px;
+    }
 }
