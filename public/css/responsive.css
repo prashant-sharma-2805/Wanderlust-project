@@ -1,0 +1,59 @@
+@media(max-width : 400px){
+    .filter p{
+        font-size: 0.4rem;
+    }
+
+    #filters{
+        display: none !important;
+    }
+
+    .navbar-collapse{
+        background-color: white;
+        text-align: center;
+    }
+
+    .search-box{
+    
+        position: relative;
+        top: 10px;
+        right: 8vw;
+    }
+
+    .search-btn{
+        width: 25%;
+        height: 60%;
+        font-size: 0.65rem;
+    }
+
+    
+
+    .search-inp{
+        width: 55%;
+        padding: 0 0.5rem 0 0.5rem !important;
+        text-align: center;
+        border: 1px solid black;
+    }
+
+    .search-inp::placeholder{
+        font-size: 0.85rem;
+        text-align: center;
+    }
+
+    .fa-compass{
+        font-size: 1.5rem;
+        position: relative;
+        top: 10px;
+    }
+
+    .hamburger{
+        background-color: white;
+        font-size: 0.65rem;
+        position: relative;
+        top: -22px;
+        left: 76vw;
+        border: 1px solid black;
+        margin-left: 1rem;
+    }
+
+ 
+}
